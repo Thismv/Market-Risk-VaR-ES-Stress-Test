@@ -7840,7 +7840,13 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>TODO: Please put your answer here.</p>
+<p><strong>SPY ETF:</strong> driven by equity price risk. P&amp;L moves directly with SPY spot price.</p>
+<p><strong>IG Corporate Bond (10yr):</strong> exposed to interest rate risk (10yr UST yield) and 
+IG credit spread risk. Long duration makes it highly sensitive to rate moves.</p>
+<p><strong>HY Corporate Bond (2yr):</strong> exposed to interest rate risk (2yr UST yield) and 
+HY credit spread risk. Short duration but dominated by credit spread volatility.</p>
+<p><strong>US Treasury (5yr, short):</strong> exposed to interest rate risk (5yr UST yield) only, 
+no credit spread. Short position means rate increases generate gains.</p>
 </div>
 </div>
 </div>
@@ -7862,7 +7868,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="1.2-Present-Value-Calculation">1.2 Present Value Calculation<a class="anchor-link" href="#1.2-Present-Value-Calculation">¶</a></h2><p>Each bond's present value is computed by discounting all future cash flows 
+<p>Each bond's present value is computed by discounting all future cash flows 
 using <strong>continuous compounding</strong>:</p>
 $$PV = \sum_{i=1}^{n} C \cdot e^{-r \cdot t_i} + F \cdot e^{-r \cdot t_n}$$<p>Where:</p>
 <ul>
@@ -7872,7 +7878,7 @@ $$PV = \sum_{i=1}^{n} C \cdot e^{-r \cdot t_i} + F \cdot e^{-r \cdot t_n}$$<p>Wh
 <li>$t_i$ = time to $i$-th cash flow in years (semi-annual: 0.5, 1.0, 1.5, ...)</li>
 <li>$n$ = total number of periods = maturity (years) × frequency</li>
 </ul>
-<p>The <code>eps</code> parameter adds a shock to the discount rate, enabling sensitivity 
+<p>The eps parameter adds a shock to the discount rate, enabling sensitivity 
 calculations (PV01, CS01) via numerical differentiation in Q1.3.</p>
 </div>
 </div>
@@ -8964,7 +8970,18 @@ $$\Delta PV \approx \Delta_{equity} \cdot \delta_{SPY} + PV01 \cdot \delta_{r} +
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="3.3-Compare-the-results-of-full-revaluation-and-Taylor's-approach-in-stress-testing-P&amp;L-calculation.-Which-one-is-better?">3.3 Compare the results of full revaluation and Taylor's approach in stress testing P&amp;L calculation. Which one is better?<a class="anchor-link" href="#3.3-Compare-the-results-of-full-revaluation-and-Taylor's-approach-in-stress-testing-P&amp;L-calculation.-Which-one-is-better?">¶</a></h2><p>Taylor <strong>overstates</strong> the portfolio loss (-$478,534 vs. -$410,371 full reval, 
+<h2 id="3.3-Compare-the-results-of-full-revaluation-and-Taylor's-approach-in-stress-testing-P&amp;L-calculation.-Which-one-is-better?">3.3 Compare the results of full revaluation and Taylor's approach in stress testing P&amp;L calculation. Which one is better?<a class="anchor-link" href="#3.3-Compare-the-results-of-full-revaluation-and-Taylor's-approach-in-stress-testing-P&amp;L-calculation.-Which-one-is-better?">¶</a></h2><p>Please limit your answer within 100 words.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Taylor <strong>overstates</strong> the portfolio loss (-$478,534 vs. -$410,371 full reval, 
 a 16.6% difference). This occurs because Taylor uses a <strong>linear approximation</strong> 
 of the price-yield relationship, ignoring <strong>convexity</strong> — bonds exhibit positive 
 convexity, meaning price declines slow as yields rise. Taylor misses this 
@@ -9072,7 +9089,7 @@ stress testing captures existential, crisis-level losses.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [88]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
@@ -9111,7 +9128,7 @@ stress testing captures existential, crisis-level losses.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>[NbConvertApp] WARNING | Alternative text is missing on 1 image(s).
-[NbConvertApp] Writing 442178 bytes to MR_starter.html
+[NbConvertApp] Writing 442172 bytes to MR_starter.html
 </pre>
 </div>
 </div>
