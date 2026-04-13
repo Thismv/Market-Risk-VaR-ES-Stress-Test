@@ -8511,24 +8511,18 @@ loss (1% of 501 ≈ 5.01, so the 6th worst scenario is the VaR threshold).</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="A-few-comments-on-the-result:">A few comments on the result:<a class="anchor-link" href="#A-few-comments-on-the-result:">¶</a></h3><ul>
-<li><strong>Portfolio worst day: 2022-02-11</strong></li>
-</ul>
-<p>On February 11, 2022, markets reacted sharply to a hotter-than-expected 
+<h3 id="A-few-comments-on-the-result:">A few comments on the result:<a class="anchor-link" href="#A-few-comments-on-the-result:">¶</a></h3><p><strong>Portfolio worst day: 2022-02-11</strong>: 
+On February 11, 2022, markets reacted sharply to a hotter-than-expected 
 U.S. CPI print (7.5% YoY which is the highest since 1982), triggering a broad 
 risk-off selloff. SPY fell sharply, IG and HY credit spreads widened, 
 and yields spiked. All four risk factors moved against the portfolio 
 simultaneously, making this the worst single day in the 2-year window.</p>
-<ul>
-<li><strong>UST worst day: 2021-11-26</strong></li>
-</ul>
-<p>The 5yr Treasury yield dropped sharply on news of the Omicron COVID variant, 
+<p><strong>UST worst day: 2021-11-26</strong>: 
+The 5yr Treasury yield dropped sharply on news of the Omicron COVID variant, 
 as markets fled to safe-haven assets. Since the portfolio is short UST, 
 a falling yield (rising bond price) generates a loss on this position.</p>
-<ul>
-<li><strong>IG worst day: 2022-03-14</strong></li>
-</ul>
-<p>Early March 2022 saw aggressive Fed rate hike pricing following Russia's 
+<p><strong>IG worst day: 2022-03-14</strong>: 
+Early March 2022 saw aggressive Fed rate hike pricing following Russia's 
 invasion of Ukraine and persistent inflation. The 10yr yield spiked 
 significantly, crushing the long 10yr IG bond position which has the 
 highest duration in the portfolio.</p>
@@ -8674,9 +8668,9 @@ ES/VaR ratio: 1.05x
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>In <strong>full revaluation</strong>, we reprice every instrument from scratch after 
+<p>In full revaluation, we reprice every instrument from scratch after 
 applying the stress shocks, then compute P&amp;L as:</p>
-$$\text{P\&amp;L} = PV(\text{shocked}) - PV(\text{base}) \times \text{positions}$$<p>The severe adverse scenario applies simultaneous shocks across all risk factors:</p>
+$$\text{P\&amp;L} = \left[ PV(\text{shocked}) - PV(\text{base}) \right] \times \text{positions}$$<p>The severe adverse scenario applies simultaneous shocks across all risk factors:</p>
 <table>
 <thead>
 <tr>
@@ -8883,7 +8877,7 @@ $$\Delta PV \approx \Delta_{equity} \cdot \delta_{SPY} + PV01 \cdot \delta_{r} +
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">### compute profit and loss (P&amp;L), Taylor approach</span>
@@ -8914,7 +8908,7 @@ $$\Delta PV \approx \Delta_{equity} \cdot \delta_{SPY} + PV01 \cdot \delta_{r} +
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">taylor</span> <span class="o">=</span> <span class="p">{</span>
@@ -8992,7 +8986,7 @@ $$\Delta PV \approx \Delta_{equity} \cdot \delta_{SPY} + PV01 \cdot \delta_{r} +
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Export intermediate results for marking... Please do not change or delete this cell</span>
@@ -9128,7 +9122,7 @@ stress testing captures existential, crisis-level losses.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span>
@@ -9165,7 +9159,7 @@ stress testing captures existential, crisis-level losses.</p>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>[NbConvertApp] WARNING | Alternative text is missing on 1 image(s).
-[NbConvertApp] Writing 443710 bytes to MR_starter.html
+[NbConvertApp] Writing 444548 bytes to MR_starter.html
 </pre>
 </div>
 </div>
