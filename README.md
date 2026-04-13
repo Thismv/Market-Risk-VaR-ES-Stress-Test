@@ -1,5 +1,3 @@
-## 1. Title & Badges
-
 # Market Risk Analysis
 ## VaR, Expected Shortfall & Stress Testing
 
@@ -7,22 +5,22 @@
 
 ## 2. What I built
 
-I put together a full market risk measurement framework around a mixed long and short portfolio of equity, investment grade credit, high yield credit, and US Treasury instruments. It runs from instrument pricing and sensitivity work through historical simulation **VaR** and **Expected Shortfall**, stress testing under a severely adverse macro scenario, **VaR** backtesting, and regulatory scaling under **FRTB**. I wanted something that feels like how a market risk desk at a bank actually sequences the work, not a box ticking exercise on the formulas alone.
+I put together a full market risk measurement framework around a mixed long and short portfolio of equity, investment grade credit, high yield credit, and US Treasury instruments. It runs from instrument pricing and sensitivity work through historical simulation **VaR** and **Expected Shortfall**, stress testing under a severely adverse macro scenario, **VaR** backtesting, and regulatory scaling under **FRTB**. I wanted something that feels like how a market risk desk at a bank actually sequences the work, not just a formula run.
 
 ## 3. The portfolio
 
-The book is long **30** **SPY** ETF positions, long **10,000** positions on a **10** year investment grade corporate bond (**A** rating, **5%** coupon), long **10,000** positions on a **2** year high yield corporate bond (**BB** rating, **7%** coupon), and short **20,000** positions on a **5** year US Treasury (**3.875%** coupon). All bonds are priced at **$100** notional using continuous compounding discounting. The short Treasury is there on purpose as a partial rate hedge, and one thing the analysis makes clear is how partial that hedge really is.
+The book is long **30** SPY ETF positions, long **10,000** positions on a 10 year investment grade corporate bond (A rating, 5% coupon), long **10,000** positions on a 2 year high yield corporate bond (BB rating, 7% coupon), and short **20,000** positions on a 5 year US Treasury (3.875% coupon). All bonds are priced at **$100** notional using continuous compounding discounting. The short Treasury is there on purpose as a partial rate hedge, and one thing the analysis makes clear is how partial that hedge really is.
 
 ## 4. Key findings
 
 A few things stood out once the numbers were in:
 
-- Portfolio **1** day **99%** **VaR** is **$9,485**, with the worst scenario landing on **2022-02-11** when U.S. **CPI** came in at **7.5%** YoY, the highest since **1982**, triggering a simultaneous selloff across equity, rates, and credit
-- **Expected Shortfall** at **97.5%** is **$9,974**, an **ES**/**VaR** ratio of **1.05x**, which tells me the tail does not blow out dramatically beyond the **VaR** threshold in this historical window
-- Under a stress scenario modeled on **2008**, the portfolio loses **$410,371**, which is **43x** larger than the **1** day **VaR**. That gap is not a model failure. It is exactly what **VaR** was never built to capture
-- The **IG** bond drives **65%** of stress losses because of its long duration (**10** year) and large size. **CS01** of **$1,007** per bps is roughly **12x** larger than **PV01** of **$82**, so this portfolio is far more sensitive to credit spread moves than to rate moves
+- Portfolio 1 day 99% VaR is **$9,485**, with the worst scenario landing on 2022-02-11 when U.S. CPI came in at 7.5% YoY, the highest since 1982, triggering a simultaneous selloff across equity, rates, and credit
+- Expected Shortfall at 97.5% is **$9,974**, an ES/VaR ratio of 1.05x, which tells me the tail does not blow out dramatically beyond the VaR threshold in this historical window
+- Under a stress scenario modeled on 2008, the portfolio loses **$410,371**, which is 43x larger than the 1 day VaR. That gap is not a model failure. It is exactly what *aR was never built to capture
+- The IG bond drives 65%*of stress losses because of its long duration (10 year) and large size. CS01 of $1,007 per bps is roughly 12x larger than PV01 of $82, so this portfolio is far more sensitive to credit spread moves than to rate moves
 - The short Treasury adds **+$38,722** in the stress scenario as rates rise, which confirms the rate hedge idea. It does nothing for the credit side, and that is where most of the risk actually sits
-- **VaR** backtesting landed in the **Basel III** green zone, which gives me comfort the model is not systematically underestimating risk in normal conditions
+- VaR backtesting landed in the Basel III green zone, which gives me comfort the model is not systematically underestimating risk in normal conditions
 
 ## 5. So what
 
