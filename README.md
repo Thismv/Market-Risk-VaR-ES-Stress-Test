@@ -41,16 +41,16 @@ The real story is the gap between **$9,485** **VaR** and **$410,371** stress los
 
 ## How it's structured
 
-The notebook runs in **eleven** sections in a fixed order on purpose. It opens with data loading and instrument pricing, steps into sensitivities, then historical simulation for **VaR** and **ES**, then **VaR** backtesting right after so you see whether the threshold behaves before you move on. Stress testing comes next. Risk limits sit after every measure is on the table so the limits tie to real numbers, not vibes. The tail covers **DV01** by tenor, risk factor correlations, and **FRTB** liquidity horizon scaling. The long form methodology and narrative live in the report. **codebase.ipynb** is the engine.
+The notebook runs in **eleven** sections in a fixed order on purpose. It opens with data loading and instrument pricing, steps into sensitivities, then historical simulation for **VaR** and **ES**, then **VaR** backtesting right after so you see whether the threshold behaves before you move on. Stress testing comes next. Risk limits sit after every measure is on the table so the limits tie to real numbers, not vibes. The tail covers **DV01** by tenor, risk factor correlations, and **FRTB** liquidity horizon scaling. The long form methodology and narrative live in the [PDF report](report/report.pdf) ([LaTeX source](report/report.tex)). [**codebase.ipynb**](codebase.ipynb) is the engine.
 
 ## Where to look
 
 | Path | What you will find |
 |---|---|
-| `codebase.ipynb` | The full analysis: pricing, sensitivities, VaR, ES, backtesting, stress testing, DV01, correlations, FRTB |
-| `data/` | Market data time series (**502** daily observations, Jan **2021** to Dec **2022**) |
-| `output/` | All exported charts and CSV results |
-| `report/` | Full methodology write up and analysis (coming soon) |
+| [**codebase.ipynb**](codebase.ipynb) | The full analysis: pricing, sensitivities, VaR, ES, backtesting, stress testing, DV01, correlations, FRTB |
+| [**data/**](data/) | [Market data time series](data/market%20data%20time%20series.xlsx) (**502** daily observations, Jan **2021** to Dec **2022**) |
+| [**output/**](output/) | All exported charts (PNG) and CSV results |
+| [**report/**](report/) | Write-up: [**report.tex**](report/report.tex) (LaTeX source), [**report.pdf**](report/report.pdf) (compiled PDF) |
 
 ## Stack
 
