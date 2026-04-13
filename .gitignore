@@ -12,3 +12,7 @@ __pycache__/
 # Environment
 venv/
 .env
+
+# Report folder: keep only the published PDF in version control
+report/*
+!report/report.pdf
