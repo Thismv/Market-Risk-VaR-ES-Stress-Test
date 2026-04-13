@@ -41,7 +41,7 @@ The real story is the gap between **$9,485** **VaR** and **$410,371** stress los
 
 ## How it's structured
 
-The notebook runs in **eleven** sections in a fixed order on purpose. It opens with data loading and instrument pricing, steps into sensitivities, then historical simulation for **VaR** and **ES**, then **VaR** backtesting right after so you see whether the threshold behaves before you move on. Stress testing comes next. Risk limits sit after every measure is on the table so the limits tie to real numbers, not vibes. The tail covers **DV01** by tenor, risk factor correlations, and **FRTB** liquidity horizon scaling. The long form methodology and narrative live in the [PDF report](report/report.pdf) ([LaTeX source](report/report.tex)). [**codebase.ipynb**](codebase.ipynb) is the engine.
+The notebook runs in **eleven** sections in a fixed order on purpose. It opens with data loading and instrument pricing, steps into sensitivities, then historical simulation for **VaR** and **ES**, then **VaR** backtesting right after so you see whether the threshold behaves before you move on. Stress testing comes next. Risk limits sit after every measure is on the table so the limits tie to real numbers, not vibes. The tail covers **DV01** by tenor, risk factor correlations, and **FRTB** liquidity horizon scaling. The long form methodology and narrative live in the [PDF report](report/report.pdf), [**codebase.ipynb**](codebase.ipynb) is the engine.
 
 ## Where to look
 
