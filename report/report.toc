@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Executive Summary}{2}{section.1}%
+\contentsline {section}{\numberline {2}Portfolio Overview}{2}{section.2}%
+\contentsline {section}{\numberline {3}Methodology}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Analytical Framework}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Risk Measures}{3}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Instrument Pricing}{3}{section.4}%
+\contentsline {section}{\numberline {5}Risk Sensitivities}{4}{section.5}%
+\contentsline {section}{\numberline {6}Historical Shock Analysis}{4}{section.6}%
+\contentsline {section}{\numberline {7}Value-at-Risk and Expected Shortfall}{6}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Methodology}{6}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Results}{6}{subsection.7.2}%
+\contentsline {section}{\numberline {8}VaR Backtesting}{7}{section.8}%
+\contentsline {section}{\numberline {9}Stress Testing}{7}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Scenario Definition}{7}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Full Revaluation vs Taylor}{8}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Risk Limits Framework}{8}{section.10}%
+\contentsline {section}{\numberline {11}DV01 by Tenor}{9}{section.11}%
+\contentsline {section}{\numberline {12}Risk Factor Correlations}{9}{section.12}%
+\contentsline {section}{\numberline {13}FRTB and Liquidity Horizons}{9}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Regulatory Context}{9}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Liquidity Horizon Scaling}{10}{subsection.13.2}%
+\contentsline {section}{\numberline {14}Key Takeaways}{10}{section.14}%
